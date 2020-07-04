@@ -3,7 +3,7 @@
 #include <omp.h>
 //由于求pi程序运行时间短, 求1000次pi值的平均值保证准确率
 #define C 1000
-const int num[] = {1000, 10000, 100000, 500000};
+const int num[] = {1000, 10000, 50000, 100000};
 
 int main(void)
 {
@@ -11,7 +11,7 @@ int main(void)
     double x, step, pi, sum;
     int i, n;
     int thread_n;
-    printf("t |    n   | time(ms) |      pi      \n");
+    printf("t |    n   | t(ms) |      pi      \n");
     for (thread_n = 1; thread_n <= 8; thread_n *= 2)
     {
         omp_set_num_threads(thread_n);
@@ -35,7 +35,7 @@ int main(void)
                 end = clock();
                 total_time += end - start;
             }
-            printf("%d | %6d | %lf | %.10lf\n", thread_n, n, (double)total_time / CLOCKS_PER_SEC * 1000 / C, pi);
+            printf("%d | %6d | %.3lf | %.10lf\n", thread_n, n, (double)total_time / CLOCKS_PER_SEC * 1000 / C, pi);
         }
     }
     return 0;

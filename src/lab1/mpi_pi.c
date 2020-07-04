@@ -2,7 +2,7 @@
 #include "mpi.h"
 #include <time.h>
 #define C 1000
-const int num[] = {1000, 10000, 100000, 500000};
+const int num[] = {1000, 10000, 50000, 100000};
 
 int main(int argc, char **argv)
 {
