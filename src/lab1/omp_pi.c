@@ -3,7 +3,7 @@
 #include <omp.h>
 //由于求pi程序运行时间短, 求1000次pi值的平均值保证准确率
 #define C 1000
-const int num[] = {1000,10000,50000,100000};
+const int num[] = {1000,10000,100000,500000};
 
 int main(void) {
     clock_t start, end, total_time;
