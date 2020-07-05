@@ -27,7 +27,6 @@ int temp[BUCKET];
 
 void calcNextV(int myid)
 {
-    // 由于使用srand函数生成随机数, 所以并行时各进程产生的随机结果大致相同, 导致最终结果相当于车辆数目只有规模/进程数的模拟情况, 再每个位置乘以进程数, 所以进程数不同时, 结果完全不相似. 为了避免上述情况srand后增加迭代次数为myid*500的循环, 这样每个进程结果大致相同
     srand((unsigned int)time(NULL));
     for (int i = 0; i < myid * 500; i++)
         rand();
