@@ -1,0 +1,21 @@
+mpicc lab4.c -o lab4
+echo -e "\nthread_n = 1"
+mpiexec -n 1 ./lab4 10000
+mpiexec -n 1 ./lab4 1000000
+mpiexec -n 1 ./lab4 3000000
+mpiexec -n 1 ./lab4 64
+echo -e "\nthread_n = 2"
+mpiexec -n 2 ./lab4 10000
+mpiexec -n 2 ./lab4 1000000
+mpiexec -n 2 ./lab4 3000000
+mpiexec -n 2 ./lab4 64
+echo -e "\nthread_n = 4"
+mpiexec -n 4 ./lab4 10000
+mpiexec -n 4 ./lab4 1000000
+mpiexec -n 4 ./lab4 3000000
+mpiexec -n 4 ./lab4 64
+echo -e "\nthread_n = 8"
+mpiexec -n 8 ./lab4 10000
+mpiexec -n 8 ./lab4 1000000
+mpiexec -n 8 ./lab4 3000000
+mpiexec -n 8 ./lab4 64
