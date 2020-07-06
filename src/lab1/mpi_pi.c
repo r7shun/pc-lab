@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     {
         n = num[i];
         total_time = 0.0;
-        for (int times = 0; times < C; times++)
+        for (int k = 0; k < C; k++)
         {
             if (myid == 0)
                 start = MPI_Wtime();
