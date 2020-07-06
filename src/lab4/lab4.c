@@ -174,7 +174,7 @@ int main(int argc, char *argv[])
         t2 = MPI_Wtime();
         printf(" %7d | ", N);
         printf(" %.3lf\n", (t2 - t1) * 1000);
-
+        // 8线程N=64时会输出排序结果
         if (N == 64 && num_processes == 8)
         {
             printf("------------------------------------------------\n");
